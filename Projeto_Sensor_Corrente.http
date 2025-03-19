@@ -1,0 +1,6 @@
+@Projeto_Sensor_Corrente_HostAddress = http://localhost:5090
+
+GET {{Projeto_Sensor_Corrente_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
