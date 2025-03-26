@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Projeto_Sensor_Corrente.src.Dto;
 using ProjetoSensor.Models;
 using ProjetoSensor.Services;
 
@@ -24,5 +25,13 @@ public class SensorController(SensorService sensorService) : ControllerBase
                 data_hora = resultado.DataHora,
             }
         );
+    }
+
+    [HttpGet("medicao-result")]
+    public async Task<ActionResult<List<MedicaoResultDtoResponse>>> MedirResult()
+    {
+        var response = await _sensorService.ResultMedicaoService();
+
+        return Ok(response);
     }
 }

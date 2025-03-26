@@ -1,3 +1,6 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Projeto_Sensor_Corrente.src.Dto;
 using ProjetoSensor.Data;
 using ProjetoSensor.Models;
 
@@ -13,5 +16,21 @@ public class SensorService(ProjetoSensorContext context)
         await _context.SaveChangesAsync();
 
         return medicao;
+    }
+
+    public async Task<List<MedicaoResultDtoResponse>> ResultMedicaoService()
+    {
+        var medicoes = await _context.Medicoes.ToListAsync();
+
+        var medicoesDto = medicoes
+            .Select(m => new MedicaoResultDtoResponse
+            {
+                Id = m.Id,
+                ValorCorrente = m.ValorCorrente,
+                DataHora = m.DataHora,
+            })
+            .ToList();
+
+        return medicoesDto;
     }
 }
