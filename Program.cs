@@ -5,7 +5,8 @@ using ProjetoSensor.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<ProjetoSensorContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))
+);
 
 builder.Services.AddScoped<SensorService>();
 
@@ -14,6 +15,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+app.Urls.Add("http://0.0.0.0:5090");
 
 if (app.Environment.IsDevelopment())
 {
