@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Projeto_Sensor_Corrente")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1128ff9b4687ba9290bd8644aa26a7528e5d1681")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4460272b3f10b256d8f40839fe44890fdcbefd52")]
 [assembly: System.Reflection.AssemblyProductAttribute("Projeto_Sensor_Corrente")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Projeto_Sensor_Corrente")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
